@@ -1,687 +1,658 @@
 <!doctype html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kostro Pizza — меню</title>
-    <meta name="description" content="Меню Kostro Pizza: піца, салати, закуски, перші та другі страви, соуси, десерти." />
-    <link rel="stylesheet" href="styles.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kostro Pizza — меню</title>
+  <meta name="description" content="Меню Kostro Pizza: піца, салати, закуски, перші та другі страви, соуси, десерти. Замовлення онлайн." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
 
-    <!-- (Опційно) красивий шрифт з Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<!-- ══════════════════════════════════════
+     HEADER
+══════════════════════════════════════ -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="#top">
+      <div class="brand-logo">
+        <img src="img/logo.jpg" alt="Kostro Pizza" />
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">Kostro</span>
+        <span class="brand-tagline">Pizzeria</span>
+      </div>
+    </a>
 
-  <body>
-    <a class="skip-link" href="#menu">Перейти до меню</a>
+    <div class="header-actions">
+      <a class="hdr-btn hdr-btn--ghost" href="tel:+380730136333">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.59 3.47 2 2 0 0 1 3.56 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+        Подзвонити
+      </a>
+      <a class="hdr-btn hdr-btn--inst" href="https://instagram.com/kostro_pizza" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        Instagram
+      </a>
+    </div>
+  </div>
+</header>
 
-    <!-- Header -->
-    <header class="header" id="top">
-      <div class="container header__bar">
-        <div class="brand">
-          <div class="brand__mark">
-  <img src="img/logo.jpg" alt="Kostro Pizza">
+<!-- ══════════════════════════════════════
+     STICKY NAV
+══════════════════════════════════════ -->
+<nav class="sticky-nav" id="sticky-nav">
+  <div class="container nav-inner">
+    <a class="nav-chip" href="#pizza">🍕 Піца</a>
+    <a class="nav-chip" href="#addons">➕ Додатки</a>
+    <a class="nav-chip" href="#salads">🥗 Салати</a>
+    <a class="nav-chip" href="#cold">🫙 Закуски</a>
+    <a class="nav-chip" href="#soups">🍲 Перші страви</a>
+    <a class="nav-chip" href="#sauces">🥣 Соуси</a>
+    <a class="nav-chip" href="#beer">🍺 До пива</a>
+    <a class="nav-chip" href="#desserts">🍦 Десерти</a>
+    <a class="nav-chip" href="#second">🍽️ Другі страви</a>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Смакуй момент</p>
+      <h1 class="hero-title">Kostro<br><em>Pizza</em></h1>
+      <p class="hero-desc">
+        Справжня італійська піца, домашня кухня, свіжі інгредієнти.<br>
+        Замовляйте онлайн — доставляємо по місту.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-fire" href="#pizza">Замовити зараз</a>
+        <a class="btn btn-outline" href="tel:+380730136333">+38 (073) 013 63 33</a>
+      </div>
+    </div>
+    <div class="hero-card" aria-hidden="true">
+      <div class="hero-card-top">
+        <span class="pill pill--fire">🔥 Гаряче</span>
+        <span class="pill pill--muted">Доставка</span>
+      </div>
+      <div class="hero-card-emoji">🍕</div>
+      <div class="hero-card-title">Піца</div>
+      <div class="hero-card-sub">30 см · 50 см · Свіжо щодня</div>
+      <div class="hero-card-divider"></div>
+      <div class="hero-card-row">
+        <span>Від</span>
+        <strong>180 грн</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     MAIN MENU
+══════════════════════════════════════ -->
+<main class="main" id="menu">
+
+  <!-- ────────── PIZZA ────────── -->
+  <section class="menu-section" id="pizza">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title"><span>Піца</span></h2>
+        <div class="size-legend">
+          <span>30 см</span>
+          <span>50 см</span>
+        </div>
+      </div>
+      <div class="pizza-grid">
+
+        <article class="pizza-card" data-name="Маргарита" data-price30="180" data-price50="280">
+          <div class="pizza-card-body">
+            <h3 class="pizza-name">Маргарита</h3>
+            <p class="pizza-desc">соус, сир, моцарела, орегано</p>
+            <div class="pizza-sizes">
+              <button class="size-btn" data-size="30" onclick="addToCart(this)">
+                <span class="size-label">30 см</span>
+                <span class="size-price">180 ₴</span>
+              </button>
+              <button class="size-btn" data-size="50" onclick="addToCart(this)">
+                <span class="size-label">50 см</span>
+                <span class="size-price">280 ₴</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="pizza-card" data-name="Капрічіоза" data-price30="210" data-price50="350">
+          <div class="pizza-card-body">
+            <h3 class="pizza-name">Капрічіоза</h3>
+            <p class="pizza-desc">соус, сир, шинка, гриби свіжі, оливки, яйце, орегано</p>
+            <div class="pizza-sizes">
+              <button class="size-btn" data-size="30" onclick="addToCart(this)">
+                <span class="size-label">30 см</span>
+                <span class="size-price">210 ₴</span>
+              </button>
+              <button class="size-btn" data-size="50" onclick="addToCart(this)">
+                <span class="size-label">50 см</span>
+                <span class="size-price">350 ₴</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="pizza-card" data-name="Кальцоне" data-price30="210" data-price50="320">
+          <div class="pizza-card-body">
+            <h3 class="pizza-name">Кальцоне</h3>
+            <p class="pizza-desc">соус, сир, шинка, гриби свіжі</p>
+            <div class="pizza-sizes">
+              <button class="size-btn" data-size="30" onclick="addToCart(this)">
+                <span class="size-label">30 см</span>
+                <span class="size-price">210 ₴</span>
+              </button>
+              <button class="size-btn" data-size="50" onclick="addToCart(this)">
+                <span class="size-label">50 см</span>
+                <span class="size-price">320 ₴</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="pizza-card" data-name="Ортолана" data-price30="200" data-price50="320">
+          <div class="pizza-card-body">
+            <h3 class="pizza-name">Ортолана</h3>
+            <p class="pizza-desc">соус, сир, помідор, перець, маслини, сир фета, артишоки</p>
+            <div class="pizza-sizes">
+              <button class="size-btn" data-size="30" onclick="addToCart(this)">
+                <span class="size-label">30 см</span>
+                <span class="size-price">200 ₴</span>
+              </button>
+              <button class="size-btn" data-size="50" onclick="addToCart(this)">
+                <span class="size-label">50 см</span>
+                <span class="size-price">320 ₴</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="pizza-card" data-name="Карне" data-price30="210" data-price50="370">
+          <div class="pizza-card-body">
+            <h3 class="pizza-name">Карне</h3>
+            <p class="pizza-desc">соус, сир, шинка, салямі, бочок, помідор, орегано</p>
+            <div class="pizza-sizes">
+              <button class="size-btn" data-size="30" onclick="addToCart(this)">
+                <span class="size-label">30 см</span>
+                <span class="size-price">210 ₴</span>
+              </button>
+              <button class="size-btn" data-size="50" onclick="addToCart(this)">
+                <span class="size-label">50 см</span>
+                <span class="size-price">370 ₴</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="pizza-card" data-name="Гаваї" data-price30="205" data-price50="350">
+          <div class="pizza-card-body">
+            <h3 class="pizza-name">Гаваї</h3>
+            <p class="pizza-desc">соус, кукурудза, курка, ананас</p>
+            <div class="pizza-sizes">
+              <button class="size-btn" data-size="30" onclick="addToCart(this)">
+                <span class="size-label">30 см</span>
+                <span class="size-price">205 ₴</span>
+              </button>
+              <button class="size-btn" data-size="50" onclick="addToCart(this)">
+                <span class="size-label">50 см</span>
+                <span class="size-price">350 ₴</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="pizza-card" data-name="Буффало" data-price30="210" data-price50="360">
+          <div class="pizza-card-body">
+            <h3 class="pizza-name">Буффало</h3>
+            <p class="pizza-desc">соус барбек'ю, курка, перець халапеньо, цибуля, сир</p>
+            <div class="pizza-sizes">
+              <button class="size-btn" data-size="30" onclick="addToCart(this)">
+                <span class="size-label">30 см</span>
+                <span class="size-price">210 ₴</span>
+              </button>
+              <button class="size-btn" data-size="50" onclick="addToCart(this)">
+                <span class="size-label">50 см</span>
+                <span class="size-price">360 ₴</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="pizza-card" data-name="Пепероні" data-price30="220" data-price50="380">
+          <div class="pizza-card-body">
+            <h3 class="pizza-name">Пепероні</h3>
+            <p class="pizza-desc">соус, сир, пепероні, орегано</p>
+            <div class="pizza-sizes">
+              <button class="size-btn" data-size="30" onclick="addToCart(this)">
+                <span class="size-label">30 см</span>
+                <span class="size-price">220 ₴</span>
+              </button>
+              <button class="size-btn" data-size="50" onclick="addToCart(this)">
+                <span class="size-label">50 см</span>
+                <span class="size-price">380 ₴</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────── ADDONS ────────── -->
+  <section class="menu-section" id="extras">
+  <div class="container">
+    <h2 class="section-title">Додатки до піци</h2>
+    <p style="text-align: center; opacity: 0.7; margin-top: -20px; margin-bottom: 30px;"></p>
+    
+    <div class="list-grid list-grid--compact">
+      <div class="list-item" data-name="Сир" data-price="35" onclick="addSimple(this)">
+        <span class="li-name">Сир</span> <span class="li-price">35 ₴</span>
+        <button class="add-btn">+</button>
+      </div>
+      <div class="list-item" data-name="Гриби солені" data-price="30" onclick="addSimple(this)">
+        <span class="li-name">Гриби солені</span> <span class="li-price">30 ₴</span>
+        <button class="add-btn">+</button>
+      </div>
+      <div class="list-item" data-name="Шинка" data-price="33" onclick="addSimple(this)">
+        <span class="li-name">Шинка</span> <span class="li-price">33 ₴</span>
+        <button class="add-btn">+</button>
+      </div>
+      <div class="list-item" data-name="Бочок" data-price="32" onclick="addSimple(this)">
+        <span class="li-name">Бочок</span> <span class="li-price">32 ₴</span>
+        <button class="add-btn">+</button>
+      </div>
+      <div class="list-item" data-name="Салямі" data-price="32" onclick="addSimple(this)">
+        <span class="li-name">Салямі</span> <span class="li-price">32 ₴</span>
+        <button class="add-btn">+</button>
+      </div>
+      <div class="list-item" data-name="Ананас" data-price="30" onclick="addSimple(this)">
+        <span class="li-name">Ананас</span> <span class="li-price">30 ₴</span>
+        <button class="add-btn">+</button>
+      </div>
+      <div class="list-item" data-name="Маслини" data-price="29" onclick="addSimple(this)">
+        <span class="li-name">Маслини</span> <span class="li-price">29 ₴</span>
+        <button class="add-btn">+</button>
+      </div>
+      <div class="list-item" data-name="Курка" data-price="35" onclick="addSimple(this)">
+        <span class="li-name">Курка</span> <span class="li-price">35 ₴</span>
+        <button class="add-btn">+</button>
+      </div>
+      <div class="list-item" data-name="Помідор" data-price="30" onclick="addSimple(this)">
+        <span class="li-name">Помідор</span> <span class="li-price">30 ₴</span>
+        <button class="add-btn">+</button>
+      </div>
+      <div class="list-item" data-name="Кукурудза" data-price="30" onclick="addSimple(this)">
+        <span class="li-name">Кукурудза</span> <span class="li-price">30 ₴</span>
+        <button class="add-btn">+</button>
+      </div>
+      <div class="list-item" data-name="Перець болгарський" data-price="32" onclick="addSimple(this)">
+        <span class="li-name">Перець болгарський</span> <span class="li-price">32 ₴</span>
+        <button class="add-btn">+</button>
+      </div>
+      <div class="list-item" data-name="Цибуля" data-price="17" onclick="addSimple(this)">
+        <span class="li-name">Цибуля</span> <span class="li-price">17 ₴</span>
+        <button class="add-btn">+</button>
+      </div>
+      <div class="list-item" data-name="Гриби свіжі" data-price="28" onclick="addSimple(this)">
+        <span class="li-name">Гриби свіжі</span> <span class="li-price">28 ₴</span>
+        <button class="add-btn">+</button>
+      </div>
+      <div class="list-item" data-name="Оливки" data-price="28" onclick="addSimple(this)">
+        <span class="li-name">Оливки</span> <span class="li-price">28 ₴</span>
+        <button class="add-btn">+</button>
+      </div>
+    </div>
+
+    <h3 class="section-title" style="margin-top: 40px; font-size: 1.5rem;">Пакування</h3>
+    <div class="list-grid list-grid--compact">
+      <div class="list-item" data-name="Коробка на піцу" data-price="15" onclick="addSimple(this)">
+        <span class="li-name">Коробка на піцу</span> <span class="li-price">15 ₴</span>
+        <button class="add-btn">+</button>
+      </div>
+      <div class="list-item" data-name="Коробка на піцу XXL" data-price="25" onclick="addSimple(this)">
+        <span class="li-name">Коробка на піцу XXL</span> <span class="li-price">25 ₴</span>
+        <button class="add-btn">+</button>
+      </div>
+      <div class="list-item" data-name="Контейнер" data-price="10" onclick="addSimple(this)">
+        <span class="li-name">Контейнер</span> <span class="li-price">10 ₴</span>
+        <button class="add-btn">+</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ────────── SALADS ────────── -->
+  <section class="menu-section" id="salads">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title"><span>Салати</span></h2>
+      </div>
+      <div class="list-grid">
+        <div class="list-item" data-name="Грецький" data-price="150" onclick="addSimple(this)">
+          <span class="li-name">Грецький</span>
+          <span class="li-weight">200 гр</span>
+          <span class="li-price">150 ₴</span>
+          <button class="add-btn" tabindex="-1">+</button>
+        </div>
+        <div class="list-item" data-name="Цезар з куркою" data-price="175" onclick="addSimple(this)">
+          <span class="li-name">Цезар з куркою</span>
+          <span class="li-weight">200 гр</span>
+          <span class="li-price">175 ₴</span>
+          <button class="add-btn" tabindex="-1">+</button>
+        </div>
+        <div class="list-item" data-name="Олів'є" data-price="120" onclick="addSimple(this)">
+          <span class="li-name">Олів'є</span>
+          <span class="li-weight">200 гр</span>
+          <span class="li-price">120 ₴</span>
+          <button class="add-btn" tabindex="-1">+</button>
+        </div>
+        <div class="list-item" data-name="Вінегрет" data-price="95" onclick="addSimple(this)">
+          <span class="li-name">Вінегрет</span>
+          <span class="li-weight">200 гр</span>
+          <span class="li-price">95 ₴</span>
+          <button class="add-btn" tabindex="-1">+</button>
+        </div>
+        <div class="list-item" data-name="Салат з буряком і горіхами" data-price="110" onclick="addSimple(this)">
+          <span class="li-name">Салат з буряком і горіхами</span>
+          <span class="li-weight">200 гр</span>
+          <span class="li-price">110 ₴</span>
+          <button class="add-btn" tabindex="-1">+</button>
+        </div>
+        <div class="list-item" data-name="Салат Костро" data-price="165" onclick="addSimple(this)">
+          <span class="li-name">Салат Костро</span>
+          <span class="li-weight">250 гр</span>
+          <span class="li-price">165 ₴</span>
+          <button class="add-btn" tabindex="-1">+</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────── COLD APPETIZERS ────────── -->
+  <section class="menu-section" id="cold">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title"><span>Холодні закуски</span></h2>
+      </div>
+      <div class="list-grid">
+        <div class="list-item" data-name="Заливне з язика" data-price="250" onclick="addSimple(this)">
+          <span class="li-name">Заливне з язика</span><span class="li-weight">250 гр</span><span class="li-price">250 ₴</span><button class="add-btn" tabindex="-1">+</button>
+        </div>
+        <div class="list-item" data-name="Рулет з шпинатом" data-price="120" onclick="addSimple(this)">
+          <span class="li-name">Рулет з шпинатом</span><span class="li-weight">100 гр</span><span class="li-price">120 ₴</span><button class="add-btn" tabindex="-1">+</button>
+        </div>
+        <div class="list-item" data-name="Рулет з печінки" data-price="120" onclick="addSimple(this)">
+          <span class="li-name">Рулет з печінки</span><span class="li-weight">100 гр</span><span class="li-price">120 ₴</span><button class="add-btn" tabindex="-1">+</button>
+        </div>
+        <div class="list-item" data-name="Печериці фаршировані" data-price="75" onclick="addSimple(this)">
+          <span class="li-name">Печериці фаршировані</span><span class="li-weight">100 гр</span><span class="li-price">75 ₴</span><button class="add-btn" tabindex="-1">+</button>
+        </div>
+        <div class="list-item" data-name="Сирна тарілка" data-price="350" onclick="addSimple(this)">
+          <span class="li-name">Сирна тарілка</span><span class="li-weight">250 гр</span><span class="li-price">350 ₴</span><button class="add-btn" tabindex="-1">+</button>
+        </div>
+        <div class="list-item" data-name="М'ясна тарілка" data-price="350" onclick="addSimple(this)">
+          <span class="li-name">М'ясна тарілка</span><span class="li-weight">250 гр</span><span class="li-price">350 ₴</span><button class="add-btn" tabindex="-1">+</button>
+        </div>
+        <div class="list-item" data-name="Овочева тарілка" data-price="175" onclick="addSimple(this)">
+          <span class="li-name">Овочева тарілка</span><span class="li-weight">250 гр</span><span class="li-price">175 ₴</span><button class="add-btn" tabindex="-1">+</button>
+        </div>
+        <div class="list-item" data-name="Грінки з салом/оселедцем" data-price="50" onclick="addSimple(this)">
+          <span class="li-name">Грінки з салом/оселедцем</span><span class="li-weight">2 шт.</span><span class="li-price">50 ₴</span><button class="add-btn" tabindex="-1">+</button>
+        </div>
+        <div class="list-item" data-name="Оселедець маринований" data-price="50" onclick="addSimple(this)">
+          <span class="li-name">Оселедець маринований</span><span class="li-weight">100 гр</span><span class="li-price">50 ₴</span><button class="add-btn" tabindex="-1">+</button>
+        </div>
+        <div class="list-item" data-name="Перфе печінкове" data-price="250" onclick="addSimple(this)">
+          <span class="li-name">Перфе печінкове</span><span class="li-weight">350 гр</span><span class="li-price">250 ₴</span><button class="add-btn" tabindex="-1">+</button>
+        </div>
+        <div class="list-item" data-name="Соління" data-price="150" onclick="addSimple(this)">
+          <span class="li-name">Соління</span><span class="li-weight">250 гр</span><span class="li-price">150 ₴</span><button class="add-btn" tabindex="-1">+</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────── SOUPS ────────── -->
+  <section class="menu-section" id="soups">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title"><span>Перші страви</span></h2>
+      </div>
+      <div class="list-grid">
+        <div class="list-item" data-name="Грибна юшка" data-price="65" onclick="addSimple(this)"><span class="li-name">Грибна юшка</span><span class="li-weight">250 гр</span><span class="li-price">65 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Борщ червоний" data-price="85" onclick="addSimple(this)"><span class="li-name">Борщ червоний</span><span class="li-weight">250 гр</span><span class="li-price">85 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Бульйон питний" data-price="60" onclick="addSimple(this)"><span class="li-name">Бульйон питний</span><span class="li-weight">250 гр</span><span class="li-price">60 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Бульйон з вермішеллю" data-price="75" onclick="addSimple(this)"><span class="li-name">Бульйон з вермішеллю</span><span class="li-weight">300 гр</span><span class="li-price">75 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Крем-суп" data-price="65" onclick="addSimple(this)"><span class="li-name">Крем-суп</span><span class="li-weight">250 гр</span><span class="li-price">65 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Солянка" data-price="90" onclick="addSimple(this)"><span class="li-name">Солянка</span><span class="li-weight">250 гр</span><span class="li-price">90 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Ченахи" data-price="90" onclick="addSimple(this)"><span class="li-name">Ченахи</span><span class="li-weight">250 гр</span><span class="li-price">90 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Супи" data-price="80" onclick="addSimple(this)"><span class="li-name">Супи</span><span class="li-weight">250 гр</span><span class="li-price">80 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────── SAUCES ────────── -->
+  <section class="menu-section" id="sauces">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title"><span>Соуси</span></h2>
+      </div>
+      <div class="list-grid list-grid--compact">
+        <div class="list-item" data-name="Соус Часниковий" data-price="25" onclick="addSimple(this)"><span class="li-name">Часниковий</span><span class="li-weight"></span><span class="li-price">25 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Соус Кетчуп" data-price="25" onclick="addSimple(this)"><span class="li-name">Кетчуп</span><span class="li-weight"></span><span class="li-price">25 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Соус Сметанковий" data-price="25" onclick="addSimple(this)"><span class="li-name">Сметанковий</span><span class="li-weight"></span><span class="li-price">25 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Соус Сирний" data-price="30" onclick="addSimple(this)"><span class="li-name">Сирний</span><span class="li-weight"></span><span class="li-price">30 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Соус Барбек'ю" data-price="30" onclick="addSimple(this)"><span class="li-name">Барбек'ю</span><span class="li-weight"></span><span class="li-price">30 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────── BEER SNACKS ────────── -->
+  <section class="menu-section" id="beer">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title"><span>До пива</span></h2>
+      </div>
+      <div class="list-grid list-grid--compact">
+        <div class="list-item" data-name="Італійські хрустики" data-price="80" onclick="addSimple(this)"><span class="li-name">Італійські хрустики</span><span class="li-weight"></span><span class="li-price">80 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Чіпси" data-price="80" onclick="addSimple(this)"><span class="li-name">Чіпси</span><span class="li-weight"></span><span class="li-price">80 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Горішки" data-price="70" onclick="addSimple(this)"><span class="li-name">Горішки</span><span class="li-weight"></span><span class="li-price">70 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────── DESSERTS ────────── -->
+  <section class="menu-section" id="desserts">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title"><span>Десерти</span></h2>
+      </div>
+      <div class="list-grid list-grid--compact">
+        <div class="list-item" data-name="Морозиво" data-price="75" onclick="addSimple(this)"><span class="li-name">Морозиво</span><span class="li-weight"></span><span class="li-price">75 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Поливка" data-price="15" onclick="addSimple(this)"><span class="li-name">Поливка</span><span class="li-weight"></span><span class="li-price">15 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────── SECOND COURSES ────────── -->
+  <section class="menu-section" id="second">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title"><span>Другі страви</span></h2>
+      </div>
+      <div class="list-grid">
+        <div class="list-item" data-name="Картопля фрі" data-price="75" onclick="addSimple(this)"><span class="li-name">Картопля фрі</span><span class="li-weight">150 гр</span><span class="li-price">75 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Картопля по-селянськи" data-price="85" onclick="addSimple(this)"><span class="li-name">Картопля по-селянськи</span><span class="li-weight">150 гр</span><span class="li-price">85 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Картопля пюре" data-price="55" onclick="addSimple(this)"><span class="li-name">Картопля пюре</span><span class="li-weight">120 гр</span><span class="li-price">55 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Вареники з картоплею" data-price="90" onclick="addSimple(this)"><span class="li-name">Вареники з картоплею</span><span class="li-weight">150 гр</span><span class="li-price">90 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Пельмені домашні" data-price="95" onclick="addSimple(this)"><span class="li-name">Пельмені домашні</span><span class="li-weight">150 гр</span><span class="li-price">95 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Паста з куркою в сирному соусі" data-price="150" onclick="addSimple(this)"><span class="li-name">Паста з куркою в сирному соусі</span><span class="li-weight">220 гр</span><span class="li-price">150 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Деруни" data-price="90" onclick="addSimple(this)"><span class="li-name">Деруни</span><span class="li-weight">180 гр</span><span class="li-price">90 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Відбивна куряча" data-price="95" onclick="addSimple(this)"><span class="li-name">Відбивна куряча</span><span class="li-weight">100 гр</span><span class="li-price">95 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Відбивна свиняча" data-price="95" onclick="addSimple(this)"><span class="li-name">Відбивна свиняча</span><span class="li-weight">100 гр</span><span class="li-price">95 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Крученники з сиром та грибами" data-price="105" onclick="addSimple(this)"><span class="li-name">Крученники з сиром та грибами</span><span class="li-weight">130 гр</span><span class="li-price">105 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Крученники в сметанковому соусі" data-price="95" onclick="addSimple(this)"><span class="li-name">Крученники в сметанковому соусі</span><span class="li-weight">120 гр</span><span class="li-price">95 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Цибулеві кільця" data-price="65" onclick="addSimple(this)"><span class="li-name">Цибулеві кільця</span><span class="li-weight">100 гр</span><span class="li-price">65 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Нагетси" data-price="95" onclick="addSimple(this)"><span class="li-name">Нагетси</span><span class="li-weight">100 гр</span><span class="li-price">95 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Сир в фритюрі" data-price="85" onclick="addSimple(this)"><span class="li-name">Сир в фритюрі</span><span class="li-weight">150 гр</span><span class="li-price">85 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Риба з овочами та сиром" data-price="95" onclick="addSimple(this)"><span class="li-name">Риба з овочами та сиром</span><span class="li-weight">150 гр</span><span class="li-price">95 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Риба смажена" data-price="90" onclick="addSimple(this)"><span class="li-name">Риба смажена</span><span class="li-weight">100 гр</span><span class="li-price">90 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Млинці з м'ясом" data-price="65" onclick="addSimple(this)"><span class="li-name">Млинці з м'ясом</span><span class="li-weight">80 гр</span><span class="li-price">65 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Слойка з м'ясом" data-price="70" onclick="addSimple(this)"><span class="li-name">Слойка з м'ясом</span><span class="li-weight">80 гр</span><span class="li-price">70 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Стейк свинний" data-price="65" onclick="addSimple(this)"><span class="li-name">Стейк свинний</span><span class="li-weight">100 гр</span><span class="li-price">65 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Шашлик свинний" data-price="60" onclick="addSimple(this)"><span class="li-name">Шашлик свинний</span><span class="li-weight">100 гр</span><span class="li-price">60 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Ребра запечені" data-price="60" onclick="addSimple(this)"><span class="li-name">Ребра запечені</span><span class="li-weight">100 гр</span><span class="li-price">60 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Ковбаски домашні" data-price="50" onclick="addSimple(this)"><span class="li-name">Ковбаски домашні</span><span class="li-weight">1 шт.</span><span class="li-price">50 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Крила баффало" data-price="180" onclick="addSimple(this)"><span class="li-name">Крила баффало</span><span class="li-weight">250 гр</span><span class="li-price">180 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Кров'янка" data-price="50" onclick="addSimple(this)"><span class="li-name">Кров'янка</span><span class="li-weight">1 шт.</span><span class="li-price">50 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Овочі гриль" data-price="125" onclick="addSimple(this)"><span class="li-name">Овочі гриль</span><span class="li-weight">200 гр</span><span class="li-price">125 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Капуста фарширована" data-price="85" onclick="addSimple(this)"><span class="li-name">Капуста фарширована (фарш, гриби, сир)</span><span class="li-weight">100 гр</span><span class="li-price">85 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Голубці" data-price="75" onclick="addSimple(this)"><span class="li-name">Голубці</span><span class="li-weight">150 гр</span><span class="li-price">75 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Печінка смажена" data-price="70" onclick="addSimple(this)"><span class="li-name">Печінка смажена</span><span class="li-weight">100 гр</span><span class="li-price">70 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Канапе з куркою та грибами" data-price="75" onclick="addSimple(this)"><span class="li-name">Канапе з куркою, грибами та сиром</span><span class="li-weight">2 шт.</span><span class="li-price">75 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+        <div class="list-item" data-name="Деруни по-царськи" data-price="190" onclick="addSimple(this)"><span class="li-name">Деруни по-царськи</span><span class="li-weight">500 гр</span><span class="li-price">190 ₴</span><button class="add-btn" tabindex="-1">+</button></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="footer-brand">Kostro Pizza</div>
+      <div class="footer-copy">© 2025 · Всі права захищені</div>
+    </div>
+    <a class="back-top" href="#top" aria-label="Вгору">↑</a>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════
+     FLOATING CART BUTTON
+══════════════════════════════════════ -->
+<button class="cart-fab" id="cart-fab" onclick="openCart()" aria-label="Кошик">
+  🛒
+  <span class="cart-fab-count" id="cart-count">0</span>
+</button>
+
+<!-- ══════════════════════════════════════
+     CART DRAWER
+══════════════════════════════════════ -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="closeCart()"></div>
+<aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Кошик">
+  <div class="drawer-head">
+    <h2 class="drawer-title">🛒 Ваш кошик</h2>
+    <button class="drawer-close" onclick="closeCart()" aria-label="Закрити">✕</button>
+  </div>
+
+  <div class="drawer-body" id="cart-items-list">
+    <div class="cart-empty" id="cart-empty">
+      <div class="cart-empty-icon">🍕</div>
+      <p>Кошик порожній.<br>Додайте страви з меню!</p>
+    </div>
+  </div>
+
+  <div class="drawer-footer" id="drawer-footer" style="display:none">
+    <div class="cart-total-row">
+      <span>Сума замовлення:</span>
+      <strong id="cart-total">0 ₴</strong>
+    </div>
+    <button class="btn btn-fire btn-block" onclick="openOrderForm()">Оформити замовлення</button>
+  </div>
+</aside>
+
+<!-- ══════════════════════════════════════
+     ORDER FORM MODAL
+══════════════════════════════════════ -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeOrderForm()"></div>
+<div class="order-modal" id="order-modal" role="dialog" aria-modal="true" aria-label="Оформлення замовлення">
+  <div class="modal-head">
+    <h2 class="modal-title">Оформлення замовлення</h2>
+    <button class="drawer-close" onclick="closeOrderForm()" aria-label="Закрити">✕</button>
+  </div>
+
+  <div class="modal-body">
+    <!-- Order summary -->
+    <div class="order-summary" id="order-summary"></div>
+
+    <!-- Form -->
+    <div class="form-group">
+      <label class="form-label" for="f-name">Ім'я *</label>
+      <input class="form-input" id="f-name" type="text" placeholder="Ваше ім'я" autocomplete="given-name" />
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="f-phone">Телефон *</label>
+      <input class="form-input" id="f-phone" type="tel" placeholder="+38 (0XX) XXX XX XX" autocomplete="tel" />
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="f-address">Адреса доставки *</label>
+      <input class="form-input" id="f-address" type="text" placeholder="Вулиця, будинок, квартира" autocomplete="street-address" />
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="f-time">Час доставки</label>
+      <select class="form-input" id="f-time">
+        <option value="Якнайшвидше">🚀 Якнайшвидше</option>
+        <option value="До 30 хвилин">⏱ До 30 хвилин</option>
+        <option value="Через 1 годину">⏰ Через 1 годину</option>
+        <option value="Через 2 години">🕑 Через 2 години</option>
+        <option value="Конкретний час">📋 Конкретний час...</option>
+      </select>
+    </div>
+    <div class="form-group" id="custom-time-group" style="display:none">
+      <label class="form-label" for="f-custom-time">Вкажіть час</label>
+      <input class="form-input" id="f-custom-time" type="time" />
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="f-comment">Коментар до замовлення</label>
+      <textarea class="form-input form-textarea" id="f-comment" placeholder="Побажання, алергени, тощо..." rows="2"></textarea>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <div class="order-total-row">
+      <span>До сплати:</span>
+      <strong id="modal-total">0 ₴</strong>
+    </div>
+    <button class="btn btn-fire btn-block" id="submit-btn" onclick="submitOrder()">
+      Надіслати замовлення ✈️
+    </button>
+    <p class="form-note">Замовлення надходить до нас у Telegram. Ми передзвонимо для підтвердження.</p>
+  </div>
 </div>
-          <div class="brand__text">
-            <div class="brand__name">Kostro</div>
-            <div class="brand__sub">Pizza Menu</div>
-          </div>
-        </div>
 
-        <div class="header__actions">
-          <a class="btn btn--ghost" href="tel:+380730136333">📞 Подзвонити</a>
-          <a class="btn btn--gold" href="https://instagram.com/kostro_pizza" target="_blank" rel="noopener">
-            Instagram
-          </a>
-        </div>
+<!-- Toast notification -->
+<div class="toast" id="toast"></div>
+
+<div id="receipt-modal" class="modal-overlay" style="display:none;">
+  <div class="modal-content receipt-card">
+    <div class="receipt-header">
+      <span class="receipt-icon">🍕</span>
+      <h2>Дякуємо за замовлення!</h2>
+      <p>Ми вже почали готувати ваше замовлення.</p>
+    </div>
+    
+    <div id="receipt-details" class="receipt-body">
       </div>
 
-      <!-- Sticky nav (мобільна горизонтальна прокрутка) -->
-      <nav class="nav">
-        <div class="container nav__inner">
-          <a class="chip" href="#pizza">Піца</a>
-          <a class="chip" href="#addons">Додатки</a>
-          <a class="chip" href="#salads">Салати</a>
-          <a class="chip" href="#cold">Холодні закуски</a>
-          <a class="chip" href="#soups">Перші страви</a>
-          <a class="chip" href="#sauces">Соуси</a>
-          <a class="chip" href="#beer">До пива</a>
-          <a class="chip" href="#desserts">Десерти</a>
-          <a class="chip" href="#second">Другі страви</a>
-        </div>
-      </nav>
-
-      <!-- Hero -->
-      <section class="hero">
-        <div class="container hero__inner">
-          <div class="hero__left">
-            <h1 class="hero__title">
-              Kostro Pizza
-              <span class="hero__titleAccent">меню</span>
-            </h1>
-            <p class="hero__text">
-              Замовлення онлайн: <b>+38 (073) 013 63 33</b> ·
-              <b>@kostro_pizza</b>
-            </p>
-
-            <div class="hero__cta">
-              <a class="btn btn--gold btn--lg" href="#pizza">Дивитись меню</a>
-              <a class="btn btn--ghost btn--lg" href="tel:+380730136333">Подзвонити</a>
-            </div>
-
-            <!-- <div class="note">
-              <div class="note__dot" aria-hidden="true"></div>
-              <p class="note__text">
-                Ціни та позиції — як на наданому меню. Якщо щось зміниться — скажеш, я швидко оновлю.
-              </p>
-            </div>
-          </div> -->
-
-          <div class="hero__right" aria-hidden="true">
-            <div class="heroCard">
-              <div class="heroCard__top">
-                <span class="badge">30см / 50см</span>
-                <span class="badge badge--muted">UA</span>
-              </div>
-              <div class="heroCard__big">🔥</div>
-              <div class="heroCard__title">Тепла піца — швидке рішення</div>
-              <div class="heroCard__sub">Обирай розмір · додавай інгредієнти</div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </header>
-
-    <main id="menu" class="main">
-      <!-- PIZZA -->
-      <section class="section" id="pizza">
-        <div class="container">
-          <div class="section__head">
-            <h2 class="section__title">Піца</h2>
-            <div class="priceLegend" aria-label="Прайс за розміром">
-              <span class="priceLegend__item">30см</span>
-              <span class="priceLegend__item">50см</span>
-            </div>
-          </div>
-
-          <div class="grid">
-            <!-- card -->
-            <article class="card">
-              <div class="card__main">
-                <h3 class="card__title">Маргарита</h3>
-                <p class="card__desc">(соус, сир, моцарела, орегано)</p>
-              </div>
-              <div class="card__prices">
-                <div class="price">180.00</div>
-                <div class="price">280.00</div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card__main">
-                <h3 class="card__title">Капрічіоза</h3>
-                <p class="card__desc">(соус, сир, шинка, гриби свіжі, оливки, яйце, орегано)</p>
-              </div>
-              <div class="card__prices">
-                <div class="price">210.00</div>
-                <div class="price">350.00</div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card__main">
-                <h3 class="card__title">Кальцоне</h3>
-                <p class="card__desc">(соус, сир, шинка, гриби свіжі)</p>
-              </div>
-              <div class="card__prices">
-                <div class="price">210.00</div>
-                <div class="price">320.00</div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card__main">
-                <h3 class="card__title">Ортолана</h3>
-                <p class="card__desc">(соус, сир, помідор, перець, маслини, сир фета, артишоки)</p>
-              </div>
-              <div class="card__prices">
-                <div class="price">200.00</div>
-                <div class="price">320.00</div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card__main">
-                <h3 class="card__title">Карне</h3>
-                <p class="card__desc">(соус, сир, шинка, салямі, бочок, помідор, орегано)</p>
-              </div>
-              <div class="card__prices">
-                <div class="price">210.00</div>
-                <div class="price">370.00</div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card__main">
-                <h3 class="card__title">Гаваї</h3>
-                <p class="card__desc">(соус, кукурудза, курка, ананас)</p>
-              </div>
-              <div class="card__prices">
-                <div class="price">205.00</div>
-                <div class="price">350.00</div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card__main">
-                <h3 class="card__title">Полло</h3>
-                <p class="card__desc">(соус, сир, курка, гриби солені, соус часниковий)</p>
-              </div>
-              <div class="card__prices">
-                <div class="price">200.00</div>
-                <div class="price">335.00</div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card__main">
-                <h3 class="card__title">Діавола</h3>
-                <p class="card__desc">(соус, сир, салямі, перець чілі, помідор)</p>
-              </div>
-              <div class="card__prices">
-                <div class="price">230.00</div>
-                <div class="price">335.00</div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card__main">
-                <h3 class="card__title">Пататіно Фрі</h3>
-                <p class="card__desc">(соус, сир, картопля фрі, вершкові ковбаски)</p>
-              </div>
-              <div class="card__prices">
-                <div class="price">230.00</div>
-                <div class="price">370.00</div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card__main">
-                <h3 class="card__title">Перо Формаджі</h3>
-                <p class="card__desc">(вершковий соус, моцарела, сир фета, пармезан, груша)</p>
-              </div>
-              <div class="card__prices">
-                <div class="price">220.00</div>
-                <div class="price">350.00</div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card__main">
-                <h3 class="card__title">Кватро Формаджі</h3>
-                <p class="card__desc">(вершковий соус, гауда, моцарела, сир фета, пармезан)</p>
-              </div>
-              <div class="card__prices">
-                <div class="price">210.00</div>
-                <div class="price">340.00</div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card__main">
-                <h3 class="card__title">Кватро стаджіоні</h3>
-                <p class="card__desc">(соус, сир, шинка, гриби свіжі, кукурудза, маслини)</p>
-              </div>
-              <div class="card__prices">
-                <div class="price">205.00</div>
-                <div class="price">340.00</div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card__main">
-                <h3 class="card__title">Рембо</h3>
-                <p class="card__desc">(соус, сир, салямі, гриби свіжі, цибуля)</p>
-              </div>
-              <div class="card__prices">
-                <div class="price">200.00</div>
-                <div class="price">335.00</div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card__main">
-                <h3 class="card__title">Бянко</h3>
-                <p class="card__desc">(вершковий соус, гриби солені, шинка)</p>
-              </div>
-              <div class="card__prices">
-                <div class="price">200.00</div>
-                <div class="price">325.00</div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card__main">
-                <h3 class="card__title">Папероні</h3>
-                <p class="card__desc">(соус, сир, бочок, перець болгарський, орегано)</p>
-              </div>
-              <div class="card__prices">
-                <div class="price">200.00</div>
-                <div class="price">325.00</div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card__main">
-                <h3 class="card__title">Мисливська</h3>
-                <p class="card__desc">(соус, сир, гриби свіжі, ковбаски, салямі, помідор)</p>
-              </div>
-              <div class="card__prices">
-                <div class="price">215.00</div>
-                <div class="price">365.00</div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card__main">
-                <h3 class="card__title">Прошуто</h3>
-                <p class="card__desc">(соус, сир, моцарела, рукола, помідор, шинка)</p>
-              </div>
-              <div class="card__prices">
-                <div class="price">225.00</div>
-                <div class="price">375.00</div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card__main">
-                <h3 class="card__title">Дитяча</h3>
-                <p class="card__desc">(соус, сир, салямі, кукурудза)</p>
-              </div>
-              <div class="card__prices">
-                <div class="price">200.00</div>
-                <div class="price">335.00</div>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card__main">
-                <h3 class="card__title">Цезар</h3>
-                <p class="card__desc">(соус, сир, курка, листя салату, помідор, пармезан)</p>
-              </div>
-              <div class="card__prices">
-                <div class="price">225.00</div>
-                <div class="price">390.00</div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ADDONS -->
-      <section class="section" id="addons">
-        <div class="container">
-          <div class="section__head">
-            <h2 class="section__title">Додатки до піци</h2>
-            <p class="section__hint">Додавай улюблені інгредієнти</p>
-          </div>
-
-          <div class="list">
-            <div class="row"><span>Сир</span><b>35.00</b></div>
-            <div class="row"><span>Гриби солені</span><b>30.00</b></div>
-            <div class="row"><span>Шинка</span><b>33.00</b></div>
-            <div class="row"><span>Бочок</span><b>32.00</b></div>
-            <div class="row"><span>Салямі</span><b>32.00</b></div>
-            <div class="row"><span>Ананас</span><b>30.00</b></div>
-            <div class="row"><span>Маслини</span><b>29.00</b></div>
-            <div class="row"><span>Курка</span><b>35.00</b></div>
-            <div class="row"><span>Помідор</span><b>30.00</b></div>
-            <div class="row"><span>Кукурудза</span><b>30.00</b></div>
-            <div class="row"><span>Перець болгарський</span><b>32.00</b></div>
-            <div class="row"><span>Цибуля</span><b>17.00</b></div>
-            <div class="row"><span>Гриби свіжі</span><b>28.00</b></div>
-            <div class="row"><span>Оливки</span><b>28.00</b></div>
-          </div>
-
-          <div class="subcard">
-            <h3 class="subcard__title">Пакування</h3>
-            <div class="list list--compact">
-              <div class="row"><span>Коробка на піцу</span><b>15.00</b></div>
-              <div class="row"><span>Коробка на піцу XXL</span><b>25.00</b></div>
-              <div class="row"><span>Контейнер</span><b>10.00</b></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SALADS -->
-      <section class="section" id="salads">
-        <div class="container">
-          <div class="section__head">
-            <h2 class="section__title">Салати</h2>
-            <p class="section__hint">Вага + ціна</p>
-          </div>
-
-          <div class="grid grid--one">
-            <article class="item">
-              <div class="item__top">
-                <h3 class="item__name">Цезар</h3>
-                <div class="item__meta"><span>300гр</span><b>225.00</b></div>
-              </div>
-              <p class="item__desc">(салат айсберг, куряче філе, помідор, грінки, пармезан, соус)</p>
-            </article>
-
-            <article class="item">
-              <div class="item__top">
-                <h3 class="item__name">Грецький</h3>
-                <div class="item__meta"><span>200гр</span><b>200.00</b></div>
-              </div>
-              <p class="item__desc">(салат айсберг, перець болгарський, помідор, огірок, оливки, сир фета)</p>
-            </article>
-
-            <article class="item">
-              <div class="item__top">
-                <h3 class="item__name">Шопський</h3>
-                <div class="item__meta"><span>350гр</span><b>190.00</b></div>
-              </div>
-              <p class="item__desc">(помідор, огірок, перець, бринза, маслини, олія)</p>
-            </article>
-
-            <article class="item">
-              <div class="item__top">
-                <h3 class="item__name">Мисливський</h3>
-                <div class="item__meta"><span>200гр</span><b>190.00</b></div>
-              </div>
-              <p class="item__desc">(телятина, огірок солений, морква, цибуля, солені гриби, майонез)</p>
-            </article>
-
-            <article class="item">
-              <div class="item__top">
-                <h3 class="item__name">Ельза</h3>
-                <div class="item__meta"><span>250гр</span><b>175.00</b></div>
-              </div>
-              <p class="item__desc">(шинка, яйце, огірок, солені гриби, маслини, цибуля, майонез)</p>
-            </article>
-
-            <article class="item">
-              <div class="item__top">
-                <h3 class="item__name">З капусти</h3>
-                <div class="item__meta"><span>150гр</span><b>70.00</b></div>
-              </div>
-              <p class="item__desc">(капуста, цибуля, олія, оцет, кріп)</p>
-            </article>
-
-            <article class="item">
-              <div class="item__top">
-                <h3 class="item__name">Крабовий</h3>
-                <div class="item__meta"><span>170гр</span><b>195.00</b></div>
-              </div>
-              <p class="item__desc">(крабові палички, яйце, помідор, кукурудза)</p>
-            </article>
-
-            <article class="item">
-              <div class="item__top">
-                <h3 class="item__name">Свіжі овочі</h3>
-                <div class="item__meta"><span>150гр</span><b>160.00</b></div>
-              </div>
-              <p class="item__desc">(помідор, огірок, перець, цибуля, олія)</p>
-            </article>
-
-            <article class="item">
-              <div class="item__top">
-                <h3 class="item__name">Королівський</h3>
-                <div class="item__meta"><span>300гр</span><b>210.00</b></div>
-              </div>
-              <p class="item__desc">(куряче філе, сир, кукурудза, крутони, майонез)</p>
-            </article>
-
-            <article class="item">
-              <div class="item__top">
-                <h3 class="item__name">З печінки</h3>
-                <div class="item__meta"><span>250гр</span><b>195.00</b></div>
-              </div>
-              <p class="item__desc">(печінка, морква, цибуля, млинець)</p>
-            </article>
-
-            <article class="item">
-              <div class="item__top">
-                <h3 class="item__name">Зимовий</h3>
-                <div class="item__meta"><span>250гр</span><b>175.00</b></div>
-              </div>
-              <p class="item__desc">(капуста, морква, буряк, сир)</p>
-            </article>
-
-            <article class="item">
-              <div class="item__top">
-                <h3 class="item__name">“Костро”</h3>
-                <div class="item__meta"><span>300гр</span><b>220.00</b></div>
-              </div>
-            </article>
-
-            <article class="item">
-              <div class="item__top">
-                <h3 class="item__name">З шинкою та сиром</h3>
-                <div class="item__meta"><span>250гр</span><b>195.00</b></div>
-              </div>
-              <p class="item__desc">(шинка, сир, помідор, огірок, майонез)</p>
-            </article>
-
-            <article class="item">
-              <div class="item__top">
-                <h3 class="item__name">Жоржин</h3>
-                <div class="item__meta"><span>250гр</span><b>175.00</b></div>
-              </div>
-              <p class="item__desc">(шинка, яйце, сир, кукурудза, перець, цибуля, майонез)</p>
-            </article>
-
-            <article class="item">
-              <div class="item__top">
-                <h3 class="item__name">Лосось під шубою</h3>
-                <div class="item__meta"><span>250гр</span><b>255.00</b></div>
-              </div>
-              <p class="item__desc">(лосось, картопля, цибуля, морква, буряк, майонез)</p>
-            </article>
-
-            <article class="item">
-              <div class="item__top">
-                <h3 class="item__name">Капрезе</h3>
-                <div class="item__meta"><span>200гр</span><b>220.00</b></div>
-              </div>
-              <p class="item__desc">(моцарела, помідор, соус песто)</p>
-            </article>
-
-            <article class="item">
-              <div class="item__top">
-                <h3 class="item__name">Купки</h3>
-                <div class="item__meta"><span>300гр</span><b>250.00</b></div>
-              </div>
-              <p class="item__desc">(шинка, сир, огірок, помідор, кукурудза, сухарики, майонез)</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- COLD SNACKS -->
-      <section class="section" id="cold">
-        <div class="container">
-          <div class="section__head">
-            <h2 class="section__title">Холодні закуски</h2>
-          </div>
-
-          <div class="list">
-            <div class="row"><span>Заливне з язика</span><span class="muted">250гр</span><b>250.00</b></div>
-            <div class="row"><span>Рулет з шпинатом</span><span class="muted">100гр</span><b>120.00</b></div>
-            <div class="row"><span>Рулет з печінки</span><span class="muted">100гр</span><b>120.00</b></div>
-            <div class="row"><span>Печериці фаршировані</span><span class="muted">100гр</span><b>75.00</b></div>
-            <div class="row"><span>Сирна тарілка</span><span class="muted">250гр</span><b>350.00</b></div>
-            <div class="row"><span>М'ясна тарілка</span><span class="muted">250гр</span><b>350.00</b></div>
-            <div class="row"><span>Овочева тарілка</span><span class="muted">250гр</span><b>175.00</b></div>
-            <div class="row"><span>Грінки з салом/оселедцем</span><span class="muted">2 шт.</span><b>50.00</b></div>
-            <div class="row"><span>Оселедець маринований</span><span class="muted">100гр</span><b>50.00</b></div>
-            <div class="row"><span>Перфе печінкове</span><span class="muted">350гр</span><b>250.00</b></div>
-            <div class="row"><span>Соління</span><span class="muted">250гр</span><b>150.00</b></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SOUPS -->
-      <section class="section" id="soups">
-        <div class="container">
-          <div class="section__head">
-            <h2 class="section__title">Перші страви</h2>
-          </div>
-
-          <div class="list">
-            <div class="row"><span>Грибна юшка</span><span class="muted">250гр</span><b>65.00</b></div>
-            <div class="row"><span>Борщ червоний</span><span class="muted">250гр</span><b>85.00</b></div>
-            <div class="row"><span>Бульйон питний</span><span class="muted">250гр</span><b>60.00</b></div>
-            <div class="row"><span>Бульйон з вермішеллю</span><span class="muted">300гр</span><b>75.00</b></div>
-            <div class="row"><span>Крем-суп</span><span class="muted">250гр</span><b>65.00</b></div>
-            <div class="row"><span>Солянка</span><span class="muted">250гр</span><b>90.00</b></div>
-            <div class="row"><span>Ченахи</span><span class="muted">250гр</span><b>90.00</b></div>
-            <div class="row"><span>Супи</span><span class="muted">250гр</span><b>80.00</b></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SAUCES -->
-      <section class="section" id="sauces">
-        <div class="container">
-          <div class="section__head">
-            <h2 class="section__title">Соуси</h2>
-          </div>
-
-          <div class="list list--compact">
-            <div class="row"><span>Часниковий</span><b>25.00</b></div>
-            <div class="row"><span>Кетчуп</span><b>25.00</b></div>
-            <div class="row"><span>Сметанковий</span><b>25.00</b></div>
-            <div class="row"><span>Сирний</span><b>30.00</b></div>
-            <div class="row"><span>Барбек’ю</span><b>30.00</b></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- BEER -->
-      <section class="section" id="beer">
-        <div class="container">
-          <div class="section__head">
-            <h2 class="section__title">До пива</h2>
-          </div>
-
-          <div class="list list--compact">
-            <div class="row"><span>Італійські хрустики</span><b>80.00</b></div>
-            <div class="row"><span>Чіпси</span><b>80.00</b></div>
-            <div class="row"><span>Горішки</span><b>70.00</b></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- DESSERTS -->
-      <section class="section" id="desserts">
-        <div class="container">
-          <div class="section__head">
-            <h2 class="section__title">Десерти</h2>
-          </div>
-
-          <div class="list list--compact">
-            <div class="row"><span>Морозиво</span><b>75.00</b></div>
-            <div class="row"><span>Поливка</span><b>15.00</b></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECOND -->
-      <section class="section" id="second">
-        <div class="container">
-          <div class="section__head">
-            <h2 class="section__title">Другі страви</h2>
-            <p class="section__hint">Вага + ціна</p>
-          </div>
-
-          <div class="list">
-            <div class="row"><span>Картопля фрі</span><span class="muted">150гр</span><b>75.00</b></div>
-            <div class="row"><span>Картопля по селянськи</span><span class="muted">150гр</span><b>85.00</b></div>
-            <div class="row"><span>Картопля пюре</span><span class="muted">120гр</span><b>55.00</b></div>
-            <div class="row"><span>Вареники з картоплею</span><span class="muted">150гр</span><b>90.00</b></div>
-            <div class="row"><span>Пельмені домашні</span><span class="muted">150гр</span><b>95.00</b></div>
-            <div class="row"><span>Паста з куркою в сирному соусі</span><span class="muted">220гр</span><b>150.00</b></div>
-            <div class="row"><span>Деруни</span><span class="muted">180гр</span><b>90.00</b></div>
-            <div class="row"><span>Відбивна куряча</span><span class="muted">100гр</span><b>95.00</b></div>
-            <div class="row"><span>Відбивна свинна</span><span class="muted">100гр</span><b>95.00</b></div>
-
-            <div class="row row--wrap">
-              <span>Крученники обсмажені з сиром та грибами</span><span class="muted">130гр</span><b>105.00</b>
-            </div>
-            <div class="row row--wrap">
-              <span>Крученники в сметанковому соусі</span><span class="muted">120гр</span><b>95.00</b>
-            </div>
-
-            <div class="row"><span>Цибулеві кільця</span><span class="muted">100гр</span><b>65.00</b></div>
-            <div class="row"><span>Нагетси</span><span class="muted">100гр</span><b>95.00</b></div>
-            <div class="row"><span>Сир в фритюрі</span><span class="muted">150гр</span><b>85.00</b></div>
-
-            <div class="row row--wrap">
-              <span>Риба з овочами та сиром</span><span class="muted">150гр</span><b>95.00</b>
-            </div>
-            <div class="row"><span>Риба смажена</span><span class="muted">100гр</span><b>90.00</b></div>
-
-            <div class="row"><span>Млинці з м'ясом</span><span class="muted">80гр</span><b>65.00</b></div>
-            <div class="row"><span>Слойка з м'ясом</span><span class="muted">80гр</span><b>70.00</b></div>
-
-            <div class="row"><span>Стейк свинний</span><span class="muted">100гр</span><b>65.00</b></div>
-            <div class="row"><span>Шашлик свинний</span><span class="muted">100гр</span><b>60.00</b></div>
-            <div class="row"><span>Ребра запечені</span><span class="muted">100гр</span><b>60.00</b></div>
-            <div class="row"><span>Ковбаски домашні</span><span class="muted">1 шт.</span><b>50.00</b></div>
-
-            <div class="row"><span>Крила баффало</span><span class="muted">250гр</span><b>180.00</b></div>
-            <div class="row"><span>Кров'янка</span><span class="muted">1 шт.</span><b>50.00</b></div>
-            <div class="row"><span>Овочі гриль</span><span class="muted">200гр</span><b>125.00</b></div>
-
-            <div class="row row--wrap">
-              <span>Капуста фарширована (фарш, гриби, сир)</span><span class="muted">100гр</span><b>85.00</b>
-            </div>
-
-            <div class="row"><span>Голубці</span><span class="muted">150гр</span><b>75.00</b></div>
-            <div class="row"><span>Печінка смажена</span><span class="muted">100гр</span><b>70.00</b></div>
-
-            <div class="row row--wrap">
-              <span>Канапе з куркою, грибами та сиром</span><span class="muted">2 шт.</span><b>75.00</b>
-            </div>
-
-            <div class="row"><span>Деруни по царські</span><span class="muted">500гр</span><b>190.00</b></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Bottom CTA -->
-      <section class="section section--cta">
-        <div class="container cta">
-          <div class="cta__text">
-            <h2 class="cta__title">Готові замовляти?</h2>
-            <p class="cta__sub">Швидкий дзвінок або Instagram — як зручно</p>
-          </div>
-          <div class="cta__actions">
-            <a class="btn btn--gold btn--lg" href="tel:+380730136333">📞 +38 (073) 013 63 33</a>
-            <a class="btn btn--ghost btn--lg" href="https://instagram.com/kostro_pizza" target="_blank" rel="noopener">
-              @kostro_pizza
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container footer__inner">
-        <div class="footer__left">
-          <div class="footer__brand">Kostro Pizza</div>
-          <div class="footer__small">Меню</div>
-        </div>
-        <a class="toTop" href="#top" aria-label="Повернутись вгору">↑</a>
-      </div>
-    </footer>
-  </body>
+    <div class="modal-footer">
+      <button class="btn-primary" onclick="closeReceipt()">Зрозуміло</button>
+    </div>
+  </div>
+</div>
+
+<script src="cart.js"></script>
+</body>
 </html>
