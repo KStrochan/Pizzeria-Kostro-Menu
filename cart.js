@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════
    KOSTRO PIZZA — Оновлений cart.js
-   Авто-пакування + Чек у Кошику
+   Авто-пакування (Коробки та Контейнери)
 ═══════════════════════════════════════════════════ */
 
 const TELEGRAM_BOT_TOKEN = '8687219722:AAHbZlzLMlX79czLrq5Bcj8z4o8WwnyGyKU'; 
@@ -25,7 +25,6 @@ function updateFab() {
 /* ─── ЛОГІКА ДОДАВАННЯ ТОВАРІВ ─── */
 
 function addItemToCart(name, price) {
-    // Якщо був чек від попереднього замовлення — видаляємо його при новому виборі
     localStorage.removeItem('last_receipt_html');
     
     let existing = cart.find(item => item.name === name);
@@ -43,20 +42,17 @@ function addItemToCart(name, price) {
     updateFab();
 }
 
-// 1. Для ПІЦИ (з вибором розміру та авто-коробкою)
+// Функція для піци (авто-коробки)
 function addToCart(btn) {
     if (window.event) window.event.stopPropagation();
-    
     const card = btn.closest('[data-name]');
     const name = card.getAttribute('data-name');
-    const size = btn.getAttribute('data-size'); // "30" або "50"
+    const size = btn.getAttribute('data-size'); 
     const price = parseInt(size === '30' ? card.getAttribute('data-price30') : card.getAttribute('data-price50'));
     const label = `${name} (${size} см)`;
 
-    // Додаємо піцу
     addItemToCart(label, price);
 
-    // АВТО-ПАКИУВАННЯ ДЛЯ ПІЦИ
     if (size === '30') {
         addItemToCart('Коробка на піцу', 15);
     } else if (size === '50') {
@@ -64,40 +60,34 @@ function addToCart(btn) {
     }
 
     showToast(`🍕 ${label} + коробка додані!`);
-    
-    if (document.getElementById('cart-drawer').classList.contains('open')) {
-        renderCartItems();
-    }
+    if (document.getElementById('cart-drawer').classList.contains('open')) renderCartItems();
 }
 
-// 2. Для ІНШИХ СТРАВ та ДОДАТКІВ (з авто-контейнером)
+// Функція для інших страв (авто-контейнер)
 function addSimple(el) {
     const name = el.getAttribute('data-name');
     const price = parseInt(el.getAttribute('data-price'));
     
-    // Перевірка категорії через ID секції для авто-контейнера
-    const section = el.closest('section');
-    const sectionId = section ? section.id.toLowerCase() : '';
-
-    // Список ID секцій, де потрібен контейнер
-    const containerNeeded = ['salads', 'snacks', 'soups', 'main-courses', 'first-courses', 'second-courses'];
+    // Отримуємо заголовок секції, в якій знаходиться товар
+    const section = el.closest('.menu-section');
+    const sectionTitle = section ? section.querySelector('.section-title').innerText : '';
 
     addItemToCart(name, price);
 
-    // АВТО-ПАКУВАННЯ ДЛЯ КУХНІ
-    if (containerNeeded.some(cat => sectionId.includes(cat))) {
+    // ПЕРЕВІРКА: якщо секція називається "Другі страви", "Салати", "Перші страви" тощо.
+    const categoriesWithContainer = ["Другі страви", "Салати", "Холодні закуски", "Перші страви"];
+    
+    if (categoriesWithContainer.includes(sectionTitle)) {
         addItemToCart('Контейнер', 10);
         showToast(`✅ ${name} + контейнер додано!`);
     } else {
         showToast(`✅ ${name} додано!`);
     }
 
-    if (document.getElementById('cart-drawer').classList.contains('open')) {
-        renderCartItems();
-    }
+    if (document.getElementById('cart-drawer').classList.contains('open')) renderCartItems();
 }
 
-/* ─── ВІДОБРАЖЕННЯ ─── */
+/* ─── ВІДОБРАЖЕННЯ ТА ІНТЕРФЕЙС ─── */
 
 function renderCartItems() {
     const container = document.getElementById('cart-items-list');
@@ -106,14 +96,12 @@ function renderCartItems() {
 
     if (!container) return;
 
-    // Якщо є збережений чек — показуємо його
     if (lastReceipt && cart.length === 0) {
         container.innerHTML = lastReceipt;
         if (footer) footer.style.display = 'none';
         return;
     }
 
-    // Звичайний список кошика
     if (footer) footer.style.display = cart.length > 0 ? 'flex' : 'none';
     container.innerHTML = '';
 
@@ -156,8 +144,6 @@ function changeQty(id, delta) {
     }
 }
 
-/* ─── ЗАМОВЛЕННЯ ─── */
-
 async function submitOrder() {
     const name = document.getElementById('f-name').value.trim();
     const phone = document.getElementById('f-phone').value.trim();
@@ -187,14 +173,12 @@ async function submitOrder() {
         });
 
         if (response.ok) {
-            // Генеруємо HTML чека
             const receiptHtml = `
                 <div class="receipt-success" style="padding: 15px; background: #141210; border: 1px solid #e8762a; border-radius: 8px;">
                     <h3 style="color: #e8762a; margin-bottom: 10px; text-align: center;">Замовлення прийнято!</h3>
                     <p style="font-size: 0.85em; margin-bottom: 10px; border-bottom: 1px dashed #333; padding-bottom: 10px;">
                         <strong>Клієнт:</strong> ${name}<br>
-                        <strong>Доставка:</strong> ${address}<br>
-                        <strong>Час:</strong> ${time}
+                        <strong>Доставка:</strong> ${address}
                     </p>
                     <div style="font-size: 0.8em; line-height: 1.4;">
                         ${cart.map(i => `<div style="display:flex; justify-content:space-between;"><span>${i.name} x${i.qty}</span><span>${i.price * i.qty} ₴</span></div>`).join('')}
@@ -203,17 +187,14 @@ async function submitOrder() {
                         СУМА: ${total} ₴
                     </div>
                     <button onclick="clearReceipt()" style="width:100%; margin-top: 15px; padding: 10px; background: #e8762a; color: white; border: none; border-radius: 4px; cursor: pointer;">Нове замовлення</button>
-                </div>
-            `;
+                </div>`;
 
             localStorage.setItem('last_receipt_html', receiptHtml);
             cart = [];
             saveCartToStorage();
             updateFab();
             closeOrderForm();
-            openCart(); // Відкриваємо кошик, де тепер лежить чек
-        } else {
-            showToast("❌ Помилка Telegram");
+            openCart();
         }
     } catch (e) {
         showToast("❌ Помилка з’єднання");
@@ -222,8 +203,6 @@ async function submitOrder() {
         btn.textContent = 'Надіслати замовлення ✈️';
     }
 }
-
-/* ─── ІНТЕРФЕЙС ─── */
 
 function clearReceipt() {
     localStorage.removeItem('last_receipt_html');
@@ -234,13 +213,11 @@ function openCart() {
     renderCartItems();
     document.getElementById('cart-drawer').classList.add('open');
     document.getElementById('drawer-overlay').classList.add('visible');
-    document.body.style.overflow = 'hidden';
 }
 
 function closeCart() {
     document.getElementById('cart-drawer').classList.remove('open');
     document.getElementById('drawer-overlay').classList.remove('visible');
-    document.body.style.overflow = '';
 }
 
 function openOrderForm() {
@@ -248,13 +225,13 @@ function openOrderForm() {
     closeCart();
     document.getElementById('order-modal').classList.add('open');
     document.getElementById('modal-overlay').classList.add('visible');
-    document.getElementById('modal-total').textContent = cart.reduce((s, i) => s + i.price * i.qty, 0) + ' ₴';
+    const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+    document.getElementById('modal-total').textContent = total + ' ₴';
 }
 
 function closeOrderForm() {
     document.getElementById('order-modal').classList.remove('open');
     document.getElementById('modal-overlay').classList.remove('visible');
-    document.body.style.overflow = '';
 }
 
 function showToast(msg) {
@@ -265,19 +242,6 @@ function showToast(msg) {
     setTimeout(() => t.classList.remove('show'), 2500);
 }
 
-// Ініціалізація при завантаженні
 document.addEventListener('DOMContentLoaded', () => {
     updateFab();
-    const timeSelect = document.getElementById('f-time');
-    if (timeSelect) {
-        timeSelect.addEventListener('change', function() {
-            const customTime = document.getElementById('custom-time-group');
-            if (customTime) customTime.style.display = (this.value === 'Конкретний час') ? 'flex' : 'none';
-        });
-    }
-});
-
-// ESC для закриття
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') { closeCart(); closeOrderForm(); }
 });
