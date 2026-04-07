@@ -4,7 +4,7 @@
 ═══════════════════════════════════════════════════ */
 
 const TELEGRAM_BOT_TOKEN = '8687219722:AAHbZlzLMlX79czLrq5Bcj8z4o8WwnyGyKU'; 
-const TELEGRAM_CHAT_ID   = '540650628'; 
+const TELEGRAM_CHAT_ID   = '-1003682772833'; 
 
 /* ─── СТАН КОШИКА ─── */
 let cart = JSON.parse(localStorage.getItem('pizza_cart')) || [];
